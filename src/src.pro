@@ -64,7 +64,7 @@ includes.files += \
 
 linux* {
     # don't link library
-    QMAKE_CXXFLAGS += $$system(pkg-config --cflags-only-I librsvg-2.0)
+    QMAKE_CXXFLAGS += $$system($$pkgConfigExecutable() --cflags-only-I librsvg-2.0)
 
     HEADERS += \
         $$PWD/dregionmonitor.h
